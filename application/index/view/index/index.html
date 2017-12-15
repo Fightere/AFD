@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<meta name="viewport"
+			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<title>DreamTech</title>
+		<link rel="stylesheet" href="__PUBLIC__/css/iconfont.css">
+		<link rel="stylesheet" href="__PUBLIC__/css/index.css">
+        <script src="__PUBLIC__/js/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+    <img src="__PUBLIC__/images/bg.png" class="bg" alt>
+	<div class="content">
+		<form action='{:url("check")}' id="form" enctype="multipart/form-data" method="post">
+			<div class="photo" id="file">
+				<label for="photo">
+                    <i class="iconfont icon-iconfont707"></i><span>照片</span>
+                    <img src="__PUBLIC__/images/blank.png" alt=" " id="my_photo">
+                </label>
+				<input type="file" name="photo" id="photo" style="display: none;">
+            </div>
+			<div class="input_group">
+                <input type="text" name="name" placeholder="中文姓名" id="name" required>
+                <input type="radio" name="sex" value="男" id="man" checked><label for="man" style="margin-right: 20px">男</label>
+                <input type="radio" name="sex" value="女" id="female"><label for="female">女</label>
+				<input type="text" name="pclass" placeholder="专业班级（如：计算机1701班）" id="pclass" required>
+				<input maxlength="11" type="text" name="tel" placeholder="手机号" id="tel" id="tel" required>
+			</div>
+			<div>
+				<p>方向</p>
+                <ul class="interest clearfix">
+                    <li>
+                        <ul class="clearfix int_1">
+                            <li>
+                                <input name="interest[]" type="checkbox" value="UI组-" id="c1">
+                                <label for="c1">UI组</label>
+                            </li>
+                            <li class="li_mid">
+                                <input name="interest[]" type="checkbox" value="前端组-" id="c2">
+                                <label for="c2">前端组</label>
+                            </li>
+                            <li>
+                                <input name="interest[]" type="checkbox" value="软件组-" id="c3">
+                                <label for="c3">软件组</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="clearfix int_2">
+                            <li>
+                                <input name="interest[]" type="checkbox" value="硬件组-" id="c4">
+                                <label for="c4">硬件组</label>
+                            </li>
+                            <li class="li_mid">
+                                <input name="interest[]" type="checkbox" value="理论研究组-" id="c5">
+                                <label for="c5">理论研究组</label>
+                            </li>
+                            <li>
+                                <input name="interest[]" type="checkbox" value="&nbsp;" id="c6">
+                                <label for="c6">其他</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="other_inp" style="display:none;width: 100%;">
+                        <input type="text" name="interest_other" id="c7" placeholder="你的兴趣方向？">
+                    </li>
+                </ul>
+			</div>
+			<p>个人介绍</p>
+            <textarea name="intro" id="info" rows="3"></textarea>
+			<button type="submit">确认</button>
+		</form>
+    </div>
+    <script src="__PUBLIC__/js/index.js" type="text/javascript"></script>
+	</body>
+</html>
